@@ -1,9 +1,0 @@
-Let’s look at an example of how lambdas, together with behavior parameterization, can
-be used in practice to make your code more flexible and concise. A recurrent pattern in
-resource processing (for example, dealing with files or databases) is to open a resource,
-do some processing on it, and then close the resource. The setup and cleanup phases
-are always similar and surround the important code doing the processing. This is called
-the execute around pattern, as illustrated in figure 3.2. For example, in the following
-code, the highlighted lines show the boilerplate code required to read one line from a
-file (note also that you use Java 7’s try-with-resources statement, which already simplifies
-the code, because you don’t have to close the resource explicitly):

@@ -1,6 +1,6 @@
 package in.action.model;
 
-public class Apple {
+public class Apple extends Fruit {
 
 	private int weight = 0;
 	private String color = "";
@@ -8,7 +8,19 @@ public class Apple {
 	/*
 	 * 
 	 */
+
+	public Apple() {
+		super();
+
+	}
+
+	public Apple(int weight) {
+		super();
+		this.weight = weight;
+	}
+
 	public Apple(int weight, String color) {
+		super();
 		this.weight = weight;
 		this.color = color;
 	}
@@ -39,4 +51,5 @@ public class Apple {
 	public String toString() {
 		return "Apple{" + "color='" + color + '\'' + ", weight=" + weight + '}';
 	}
+
 }

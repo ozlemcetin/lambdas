@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import in.action.chap02.InventoryPredicate;
+import in.action.chap02.impl.InventoryPredicate;
 
 public class Inventory {
 

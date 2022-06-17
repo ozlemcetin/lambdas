@@ -4,7 +4,6 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>manning</groupId>
-	<artifactId>lambdas</artifactId>
 
 	<version>0.0.1</version>
 
@@ -74,4 +73,5 @@
 	</build>
 
 
+	<artifactId>java8.in.action</artifactId>
 </project>

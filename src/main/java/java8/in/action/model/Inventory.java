@@ -27,31 +27,33 @@ public class Inventory {
 	/*
 	 * TRANSACTIONS
 	 */
-	public static final List<Transaction> TRANSACTIONS = Arrays.asList(new Transaction(Currency.EUR, 1500.0),
+	public static final List<TransactionWithCurrency> TRANSACTIONS_WITH_CURRENCY = Arrays.asList(
 
-			new Transaction(Currency.USD, 2300.0),
+			new TransactionWithCurrency(Currency.EUR, 1500.0),
 
-			new Transaction(Currency.GBP, 9900.0),
+			new TransactionWithCurrency(Currency.USD, 2300.0),
 
-			new Transaction(Currency.EUR, 1100.0),
+			new TransactionWithCurrency(Currency.GBP, 9900.0),
 
-			new Transaction(Currency.JPY, 7800.0),
+			new TransactionWithCurrency(Currency.EUR, 1100.0),
 
-			new Transaction(Currency.CHF, 6700.0),
+			new TransactionWithCurrency(Currency.JPY, 7800.0),
 
-			new Transaction(Currency.EUR, 5600.0),
+			new TransactionWithCurrency(Currency.CHF, 6700.0),
 
-			new Transaction(Currency.USD, 4500.0),
+			new TransactionWithCurrency(Currency.EUR, 5600.0),
 
-			new Transaction(Currency.CHF, 3400.0),
+			new TransactionWithCurrency(Currency.USD, 4500.0),
 
-			new Transaction(Currency.GBP, 3200.0),
+			new TransactionWithCurrency(Currency.CHF, 3400.0),
 
-			new Transaction(Currency.USD, 4600.0),
+			new TransactionWithCurrency(Currency.GBP, 3200.0),
 
-			new Transaction(Currency.JPY, 5700.0),
+			new TransactionWithCurrency(Currency.USD, 4600.0),
 
-			new Transaction(Currency.EUR, 6800.0));
+			new TransactionWithCurrency(Currency.JPY, 5700.0),
+
+			new TransactionWithCurrency(Currency.EUR, 6800.0));
 
 	/*
 	 * MENU
@@ -102,4 +104,30 @@ public class Inventory {
 		DISH_TAGS.put("salmon", Arrays.asList("delicious", "fresh"));
 	}
 
+	/*
+	 * TRADERS
+	 */
+
+	public static final Trader TRADER_BRIAN = new Trader("Brian", "Cambridge");
+	public static final Trader TRADER_RAOUL = new Trader("Raoul", "Cambridge");
+	public static final Trader TRADER_MARIO = new Trader("Mario", "Milan");
+	public static final Trader TRADER_ALAN = new Trader("Alan", "Cambridge");
+
+	/*
+	 * TRANSACTIONS
+	 */
+
+	public static final List<TransactionWithTrader> TRANSACTIONS_WITH_TRADERS = Arrays.asList(
+
+			new TransactionWithTrader(TRADER_BRIAN, 2011, 300),
+
+			new TransactionWithTrader(TRADER_RAOUL, 2012, 1000),
+
+			new TransactionWithTrader(TRADER_RAOUL, 2011, 400),
+
+			new TransactionWithTrader(TRADER_MARIO, 2012, 710),
+
+			new TransactionWithTrader(TRADER_MARIO, 2012, 700),
+
+			new TransactionWithTrader(TRADER_ALAN, 2012, 950));
 }

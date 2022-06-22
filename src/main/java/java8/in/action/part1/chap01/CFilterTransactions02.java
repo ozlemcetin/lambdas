@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import java8.in.action.model.Currency;
 import java8.in.action.model.Inventory;
-import java8.in.action.model.Transaction;
+import java8.in.action.model.TransactionWithCurrency;
 
 public class CFilterTransactions02 {
 
@@ -19,8 +19,8 @@ public class CFilterTransactions02 {
 		 * each element one by one using a for-each loop and then process the element
 		 */
 		{
-			Map<Currency, List<Transaction>> transactionsByCurrencies = filterExpensiveTransactionsAndGroupByCurrency(
-					Inventory.TRANSACTIONS);
+			Map<Currency, List<TransactionWithCurrency>> transactionsByCurrencies = filterExpensiveTransactionsAndGroupByCurrency(
+					Inventory.TRANSACTIONS_WITH_CURRENCY);
 
 			System.out.println(transactionsByCurrencies);
 
@@ -33,13 +33,13 @@ public class CFilterTransactions02 {
 		{
 			// import static java.util.stream.Collectors.toList;
 
-			Map<Currency, List<Transaction>> transactionsByCurrencies = Inventory.TRANSACTIONS.stream()
+			Map<Currency, List<TransactionWithCurrency>> transactionsByCurrencies = Inventory.TRANSACTIONS_WITH_CURRENCY.stream()
 
 					// Filter expensive transactions.
-					.filter((Transaction t) -> t.getValue() > 7000)
+					.filter((TransactionWithCurrency t) -> t.getValue() > 7000)
 
 					// Group them by currency
-					.collect(Collectors.groupingBy(Transaction::getCurrency));
+					.collect(Collectors.groupingBy(TransactionWithCurrency::getCurrency));
 
 			System.out.println(transactionsByCurrencies);
 		}
@@ -50,20 +50,20 @@ public class CFilterTransactions02 {
 	 * group them by currency
 	 */
 
-	public static Map<Currency, List<Transaction>> filterExpensiveTransactionsAndGroupByCurrency(
-			List<Transaction> transactions) {
+	public static Map<Currency, List<TransactionWithCurrency>> filterExpensiveTransactionsAndGroupByCurrency(
+			List<TransactionWithCurrency> transactions) {
 
-		Map<Currency, List<Transaction>> transactionsByCurrencies = new HashMap<>();
+		Map<Currency, List<TransactionWithCurrency>> transactionsByCurrencies = new HashMap<>();
 		{
 
-			for (Transaction transaction : transactions) {
+			for (TransactionWithCurrency transaction : transactions) {
 
 				// Filter expensive transactions.
 				if (transaction.getValue() > 7000) {
 
 					Currency key = transaction.getCurrency();
 
-					List<Transaction> list = transactionsByCurrencies.get(key);
+					List<TransactionWithCurrency> list = transactionsByCurrencies.get(key);
 					{
 						/*
 						 * If there isn’t any entry in the grouping Map for this currency, create it.

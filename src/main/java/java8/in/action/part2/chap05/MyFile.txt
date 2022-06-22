@@ -1,0 +1,5 @@
+You use Files.lines to return a stream where each element is a line in the given file.
+You then split each line into words by calling the split method on line. Notice how
+you use flatMap to produce one flattened stream of words instead of multiple streams
+of words for each line. Finally, you count each distinct word in the stream by chaining
+the methods distinct and count.

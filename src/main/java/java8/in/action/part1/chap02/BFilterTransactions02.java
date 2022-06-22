@@ -6,7 +6,7 @@ import java.util.List;
 
 import java8.in.action.model.Apple;
 import java8.in.action.model.Inventory;
-import java8.in.action.model.Transaction;
+import java8.in.action.model.TransactionWithCurrency;
 import java8.in.action.part1.chap02.impl.InventoryPredicate;
 
 public class BFilterTransactions02 {
@@ -36,7 +36,7 @@ public class BFilterTransactions02 {
 
 		// Expensive Transactions.
 		System.out.println(
-				"Expensive Transactions: " + filter(Inventory.TRANSACTIONS, (Transaction t) -> t.getValue() > 7000));
+				"Expensive Transactions: " + filter(Inventory.TRANSACTIONS_WITH_CURRENCY, (TransactionWithCurrency t) -> t.getValue() > 7000));
 
 		// Numbers
 		{

@@ -123,6 +123,19 @@ public class BMappingExample05 {
 		// USING FLATMAP
 		{
 
+			/*
+			 * Using the flatMap method has the effect of mapping each array not with a
+			 * stream but with the contents of that stream.
+			 * 
+			 * All the separate streams that were generated when using map(Arrays::stream)
+			 * get amalgamated—flattened into a single stream
+			 * 
+			 * In a nutshell, the flatMap method lets you replace each value of a stream
+			 * with another stream and then concatenates all the generated streams into a
+			 * single stream.
+			 */
+
+			// flatMap
 			{
 				List<String> list = words.stream().
 

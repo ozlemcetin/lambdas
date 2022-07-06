@@ -138,5 +138,65 @@ public class ACollectorsExample01 {
 
 		}
 
+		{
+			/*
+			 * The previous example clearly shows one of the main advantages of
+			 * functional-style programming over an imperative approach: you just have to
+			 * formulate the result you want to obtain the “what” and not the steps you need
+			 * to perform to obtain it—the “how.”
+			 * 
+			 * In the previous example, the argument passed to the collect method is an
+			 * implementation of the Collector interface, which is a recipe for how to build
+			 * a summary of the elements in the Stream.
+			 * 
+			 * 
+			 * In the previous chapter, the toList recipe just said “Make a list of each
+			 * element in turn”; in this example, the groupingBy recipe says “Make a Map
+			 * whose keys are (currency) buckets and whose values are a list of elements in
+			 * those buckets.”
+			 * 
+			 * The difference between the imperative and functional versions of this example
+			 * is even more pronounced if you perform multilevel groupings:
+			 * 
+			 * in this case the imperative code quickly becomes harder to read, maintain,
+			 * and modify due to the number of deeply nested loops and conditions required.
+			 * 
+			 * In comparison, the functional-style version, as you’ll discover in section
+			 * 6.3, can be easily enhanced with an additional collector
+			 */
+		}
+
+		{
+			/*
+			 * Typically, the Collector applies a transforming function to the element
+			 * (quite often this is the identity transformation, which has no effect, for
+			 * example, as in toList), and accumulates the result in a data structure that
+			 * forms the final output of this process.
+			 * 
+			 * For instance, in our transaction-grouping example shown previously, the
+			 * transformation function extracts the currency from each transaction, and
+			 * subsequently the transaction itself is accumulated in the resulting Map,
+			 * using the currency as key.
+			 * 
+			 * 
+			 * The implementation of the methods of the Collector interface defines how to
+			 * perform a reduction operation on a stream, such as the one in our currency
+			 * example.
+			 * 
+			 * We investigate how to create customized collectors in sections 6.5 and 6.6.
+			 * But the Collectors utility class provides lots of static factory methods to
+			 * conveniently create an instance of the most common collectors that are ready
+			 * to use.
+			 * 
+			 * The most straightforward and frequently used collector is the toList static
+			 * method, which gathers all the elements of a stream into a List:
+			 */
+
+			List<TransactionWithCurrency> list = Inventory.TRANSACTIONS_WITH_CURRENCY.stream()
+					.collect(Collectors.toList());
+
+			System.out.println(list);
+		}
+
 	}
 }

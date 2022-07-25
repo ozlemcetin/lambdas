@@ -1,4 +1,4 @@
-package java8.in.action.part2.chap06;
+package java8.in.action.part2.chap06A;
 
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -69,7 +69,16 @@ public class DReductionExample07 {
 
 			Integer totalCalories = Inventory.MENU.stream()
 
-					.collect(Collectors.reducing(0, Dish::getCalories, Integer::sum));
+					.collect(Collectors.reducing(
+
+							// Initial value
+							0,
+
+							// Transformation function
+							Dish::getCalories,
+
+							// Aggregating function
+							Integer::sum));
 
 			System.out.println("totalCalories: " + totalCalories);
 

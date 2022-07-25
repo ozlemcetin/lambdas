@@ -1,4 +1,4 @@
-package java8.in.action.part2.chap06;
+package java8.in.action.part2.chap06A;
 
 import java.util.Comparator;
 import java.util.Optional;

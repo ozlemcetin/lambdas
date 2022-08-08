@@ -1,0 +1,18 @@
+package java8.in.action.part3.chap08.impl;
+
+public class LeMonde implements Observer {
+
+	/*
+	 * You can now declare different observers (here, the three newspapers) that
+	 * produce a different action for each different keyword contained in a tweet:
+	 */
+
+	@Override
+	public void notify(String tweet) {
+
+		if (tweet != null && tweet.contains("wine")) {
+			System.out.println("Today cheese, wine and news! " + tweet);
+		}
+	}
+
+}

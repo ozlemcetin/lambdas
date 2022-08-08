@@ -10,6 +10,9 @@ public class GCollectors24 {
 
 	public static void main(String[] args) throws Exception {
 
+		//Developing your own collector for better performance
+		
+		//toList
 		{
 			List<Dish> dishes = Inventory.MENU.stream()
 

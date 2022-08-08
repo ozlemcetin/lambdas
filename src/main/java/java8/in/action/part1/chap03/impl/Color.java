@@ -1,4 +1,4 @@
-package java8.in.action.model;
+package java8.in.action.part1.chap03.impl;
 
 public class Color {
 

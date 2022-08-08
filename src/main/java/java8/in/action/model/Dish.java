@@ -52,6 +52,21 @@ public class Dish {
 		return type;
 	}
 
+	/*
+	 * add the method getCaloricLevel inside the Dish class
+	 */
+	public CaloricLevel getCaloricLevel() {
+
+		if (this.getCalories() <= 400)
+			return CaloricLevel.DIET;
+
+		else if (this.getCalories() <= 700)
+			return CaloricLevel.NORMAL;
+
+		else
+			return CaloricLevel.FAT;
+	}
+
 	@Override
 	public String toString() {
 		return "Dish [name=" + name + ", vegetarian=" + vegetarian + ", calories=" + calories + ", type=" + type + "]";

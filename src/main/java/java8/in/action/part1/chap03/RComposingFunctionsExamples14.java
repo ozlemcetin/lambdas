@@ -2,7 +2,7 @@ package java8.in.action.part1.chap03;
 
 import java.util.function.Function;
 
-import java8.in.action.model.Letter;
+import java8.in.action.part1.chap03.impl.Letter;
 
 public class RComposingFunctionsExamples14 {
 

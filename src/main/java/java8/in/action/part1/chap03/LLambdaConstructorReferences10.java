@@ -9,9 +9,9 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 import java8.in.action.model.Apple;
-import java8.in.action.model.Color;
 import java8.in.action.model.Fruit;
 import java8.in.action.model.Orange;
+import java8.in.action.part1.chap03.impl.Color;
 import java8.in.action.part1.chap03.impl.TriFunction;
 
 public class LLambdaConstructorReferences10 {
@@ -106,7 +106,7 @@ public class LLambdaConstructorReferences10 {
 		}
 
 		{
-			TriFunction<Integer, Integer, Integer, Color> colorFactory = java8.in.action.model.Color::new;
+			TriFunction<Integer, Integer, Integer, Color> colorFactory = java8.in.action.part1.chap03.impl.Color::new;
 
 			Color color = colorFactory.apply(10, 20, 10);
 

@@ -1,27 +1,28 @@
 package java8.in.action.model;
-public  class Trader{
-	
+
+public class Trader {
+
 	private String name;
 	private String city;
 
-	public Trader(String n, String c){
+	public Trader(String n, String c) {
 		this.name = n;
 		this.city = c;
 	}
 
-	public String getName(){
+	public String getName() {
 		return this.name;
 	}
 
-	public String getCity(){
+	public String getCity() {
 		return this.city;
 	}
 
-	public void setCity(String newCity){
+	public void setCity(String newCity) {
 		this.city = newCity;
 	}
 
-	public String toString(){
-		return "Trader:"+this.name + " in " + this.city;
+	public String toString() {
+		return "Trader:" + this.name + " in " + this.city;
 	}
 }

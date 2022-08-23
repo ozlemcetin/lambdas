@@ -9,7 +9,7 @@ public class Insurance {
 	 * have to work out what’s wrong in your data instead of adding a piece of code
 	 * covering up this circumstance
 	 */
-	private String name;
+	private final String name;
 
 	public Insurance(String name) {
 		this.name = name;

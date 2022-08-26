@@ -2,13 +2,13 @@ package java8.in.action.part3.chap11;
 
 import java.util.List;
 
-import java8.in.action.part3.chap11.impl.BestPriceFinder;
+import java8.in.action.part3.chap11.impl.BestPriceFinderWithDiscount;
 
 public class CNonBlocking05 {
 
 	public static void main(String[] args) throws Exception {
 
-		BestPriceFinder finder = new BestPriceFinder();
+		BestPriceFinderWithDiscount finder = new BestPriceFinderWithDiscount();
 
 		/*
 		 * [BestPrice price is 110.93, LetsSaveBig price is 135.58, MyFavoriteShop price
